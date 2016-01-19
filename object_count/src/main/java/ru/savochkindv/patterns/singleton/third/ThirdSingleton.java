@@ -6,7 +6,7 @@ package ru.savochkindv.patterns.singleton.third;
  * Минусы: осталась проблема с обработкой исключительных ситуаций в конструкторе
  * Created by savochkindv on 19.01.2016.
  */
-public class ThirdSingleton {
+public final class ThirdSingleton {
 
     private ThirdSingleton() {
     }
@@ -17,5 +17,10 @@ public class ThirdSingleton {
 
     public static ThirdSingleton getInstance(){
         return SingletonHolder.instance;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new UnsupportedOperationException();
     }
 }

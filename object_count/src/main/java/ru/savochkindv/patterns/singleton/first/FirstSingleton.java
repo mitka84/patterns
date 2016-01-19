@@ -6,7 +6,7 @@ package ru.savochkindv.patterns.singleton.first;
  * Не работает в многопоточной среде
  * Created by savochkindv on 19.01.2016.
  */
-public class FirstSingleton {
+public final class FirstSingleton {
 
     private static FirstSingleton instance;
 
@@ -18,5 +18,10 @@ public class FirstSingleton {
             instance = new FirstSingleton();
         }
         return instance;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new UnsupportedOperationException();
     }
 }

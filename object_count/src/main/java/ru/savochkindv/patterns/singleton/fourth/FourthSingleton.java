@@ -7,7 +7,7 @@ package ru.savochkindv.patterns.singleton.fourth;
  * Все остальные вызовы тратят время
  * Created by savochkindv on 19.01.2016.
  */
-public class FourthSingleton {
+public final class FourthSingleton {
 
     private static FourthSingleton instance;
 
@@ -19,5 +19,10 @@ public class FourthSingleton {
             instance = new FourthSingleton();
         }
         return instance;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new UnsupportedOperationException();
     }
 }

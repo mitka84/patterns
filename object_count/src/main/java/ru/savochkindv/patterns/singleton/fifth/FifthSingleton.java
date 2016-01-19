@@ -5,7 +5,7 @@ package ru.savochkindv.patterns.singleton.fifth;
  * Все проблемы решены.
  * Created by savochkindv on 19.01.2016.
  */
-public class FifthSingleton {
+public final class FifthSingleton {
 
     private static volatile FifthSingleton instance;
 
@@ -21,5 +21,10 @@ public class FifthSingleton {
             }
         }
         return instance;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new UnsupportedOperationException();
     }
 }
