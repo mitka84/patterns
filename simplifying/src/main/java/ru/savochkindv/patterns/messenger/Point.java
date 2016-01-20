@@ -4,7 +4,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Класс, описывающий координаты точки (Посыльный)
+ * РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё (РџРѕСЃС‹Р»СЊРЅС‹Р№)
  *
  * Created by savochkindv on 18.01.2016.
  */
@@ -13,10 +13,10 @@ public class Point {
     private int x, y, z;
 
     /**
-     * Конструтор
-     * @param x координата x
-     * @param y координата y
-     * @param z координата z
+     * РљРѕРЅСЃС‚СЂСѓС‚РѕСЂ
+     * @param x РєРѕРѕСЂРґРёРЅР°С‚Р° x
+     * @param y РєРѕРѕСЂРґРёРЅР°С‚Р° y
+     * @param z РєРѕРѕСЂРґРёРЅР°С‚Р° z
      */
     public Point(int x, int y, int z) {
         this.x = x;
@@ -25,8 +25,8 @@ public class Point {
     }
 
     /**
-     * Конструктор копирования
-     * @param point точка
+     * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+     * @param point С‚РѕС‡РєР°
      */
     public Point(Point point) {
         this.x = point.x;

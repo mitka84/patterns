@@ -1,4 +1,4 @@
-package ru.savochkindv.patterns.singleton.first;
+package ru.savochkindv.patterns.singleton;
 
 import org.junit.Test;
 
@@ -7,31 +7,34 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static org.junit.Assert.fail;
+
 /**
  * Created by savochkindv on 19.01.2016.
  */
-public class FirstSingletonTest {
+public class FifthSingletonTest {
 
     private static final int THREADS = 50;
 
     @Test
     public void testGetInstance() throws Exception {
         CountDownLatch counter = new CountDownLatch(1);
-        List<FirstSingleton> list = new CopyOnWriteArrayList<>();
+        List<FifthSingleton> list = new CopyOnWriteArrayList<>();
         AtomicInteger countFinished = new AtomicInteger(0);
         for (int i = 0; i < THREADS; ++i) {
-            new SingletonWorker(counter, countFinished, list);
+            new SingletonWorker5(counter, countFinished, list);
         }
         counter.countDown();
-        while (countFinished.get() != THREADS){ //Êàê ïîäðóãîìó çàäæîéíèòü îñíîâíîé ïîòîê è äðóãèå èç CountDownLatch?
+        while (countFinished.get() != THREADS) { //ÐšÐ°Ðº Ð¿Ð¾Ð´Ñ€ÑƒÐ³Ð¾Ð¼Ñƒ Ð·Ð°Ð´Ð¶Ð¾Ð¹Ð½Ð¸Ñ‚ÑŒ Ð¾ÑÐ½Ð¾Ð²Ð½Ð¾Ð¹ Ð¿Ð¾Ñ‚Ð¾Ðº Ð¸ Ð´Ñ€ÑƒÐ³Ð¸Ðµ Ð¸Ð· CountDownLatch?
             Thread.sleep(10);
         }
         System.out.println("All finished");
         System.out.println(list.size());
-        FirstSingleton first = list.get(0);
-        for(FirstSingleton singleton : list){
+        FifthSingleton first = list.get(0);
+        for(FifthSingleton singleton : list){
             if(!first.equals(singleton)){
                 System.out.println("Awesome! Different singletons!");
+                fail();
                 break;
             }
         }

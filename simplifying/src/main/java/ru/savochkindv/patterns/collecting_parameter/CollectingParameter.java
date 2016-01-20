@@ -3,7 +3,7 @@ package ru.savochkindv.patterns.collecting_parameter;
 import java.util.ArrayList;
 
 /**
- * Сборщик параметров
+ * РЎР±РѕСЂС‰РёРє РїР°СЂР°РјРµС‚СЂРѕРІ
  * Created by savochkindv on 18.01.2016.
  */
 public class CollectingParameter extends ArrayList<String> {

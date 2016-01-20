@@ -1,22 +1,20 @@
-package ru.savochkindv.patterns.singleton.fourth;
-
-import ru.savochkindv.patterns.singleton.first.FirstSingleton;
+package ru.savochkindv.patterns.singleton;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Класс, описывающий воркера для теста
+ * РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РІРѕСЂРєРµСЂР° РґР»СЏ С‚РµСЃС‚Р°
  * Created by savochkindv on 19.01.2016.
  */
-public class SingletonWorker implements Runnable {
+public class SingletonWorker3 implements Runnable {
 
     private CountDownLatch timer;
-    private List<FourthSingleton> list;
+    private List<ThirdSingleton> list;
     private AtomicInteger countFinished;
 
-    public SingletonWorker(CountDownLatch timer, AtomicInteger countFinished, List<FourthSingleton> list) {
+    public SingletonWorker3(CountDownLatch timer, AtomicInteger countFinished, List<ThirdSingleton> list) {
         this.timer = timer;
         this.list = list;
         this.countFinished = countFinished;
@@ -30,7 +28,7 @@ public class SingletonWorker implements Runnable {
         } catch (InterruptedException ie) {
             ie.printStackTrace();
         }
-        list.add(FourthSingleton.getInstance());
+        list.add(ThirdSingleton.getInstance());
         countFinished.incrementAndGet();
         System.out.println("Finish work");
     }

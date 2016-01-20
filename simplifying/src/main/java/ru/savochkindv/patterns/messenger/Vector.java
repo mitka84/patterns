@@ -1,7 +1,7 @@
 package ru.savochkindv.patterns.messenger;
 
 /**
- * Класс, описывающий вектор
+ * РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РІРµРєС‚РѕСЂ
  * Created by savochkindv on 18.01.2016.
  */
 public class Vector {
@@ -9,9 +9,9 @@ public class Vector {
     public int magnitude, direction;
 
     /**
-     * Конструктор
-     * @param magnitude величина
-     * @param direction направление
+     * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+     * @param magnitude РІРµР»РёС‡РёРЅР°
+     * @param direction РЅР°РїСЂР°РІР»РµРЅРёРµ
      */
     public Vector ( int magnitude, int direction ) {
         this .magnitude = magnitude;

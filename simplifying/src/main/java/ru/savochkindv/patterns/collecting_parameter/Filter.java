@@ -1,30 +1,30 @@
 package ru.savochkindv.patterns.collecting_parameter;
 
 /**
- * Фильтр
+ * Р¤РёР»СЊС‚СЂ
  * Created by savochkindv on 18.01.2016.
  */
 public class Filter {
 
     /**
-     * Добавляет к параметрам строку "accumulating"
-     * @param cp сборшик параметров
+     * Р”РѕР±Р°РІР»СЏРµС‚ Рє РїР°СЂР°РјРµС‚СЂР°Рј СЃС‚СЂРѕРєСѓ "accumulating"
+     * @param cp СЃР±РѕСЂС€РёРє РїР°СЂР°РјРµС‚СЂРѕРІ
      */
     public void f ( CollectingParameter cp ) {
         cp.add ( "accumulating" ) ;
     }
 
     /**
-     * Добавляет к параметрам строку "items"
-     * @param cp сборшик параметров
+     * Р”РѕР±Р°РІР»СЏРµС‚ Рє РїР°СЂР°РјРµС‚СЂР°Рј СЃС‚СЂРѕРєСѓ "items"
+     * @param cp СЃР±РѕСЂС€РёРє РїР°СЂР°РјРµС‚СЂРѕРІ
      */
     public void g ( CollectingParameter cp ) {
         cp.add ( "items" ) ;
     }
 
     /**
-     * Добавляет к параметрам строку "as we go"
-     * @param cp сборшик параметров
+     * Р”РѕР±Р°РІР»СЏРµС‚ Рє РїР°СЂР°РјРµС‚СЂР°Рј СЃС‚СЂРѕРєСѓ "as we go"
+     * @param cp СЃР±РѕСЂС€РёРє РїР°СЂР°РјРµС‚СЂРѕРІ
      */
     public void h ( CollectingParameter cp ) {
         cp.add ( "as we go" ) ;

@@ -1,14 +1,14 @@
 package ru.savochkindv.patterns.messenger;
 
 /**
- * Класс, предоставляющий методы для рассчетов
+ * РљР»Р°СЃСЃ, РїСЂРµРґРѕСЃС‚Р°РІР»СЏСЋС‰РёР№ РјРµС‚РѕРґС‹ РґР»СЏ СЂР°СЃСЃС‡РµС‚РѕРІ
  * Created by savochkindv on 18.01.2016.
  */
 public class Space {
 
     public static Point translate ( Point p, Vector v ) {
-        p = new Point ( p ) ; // Не изменяем оригинал
-        // Выполняем расчеты, используя v. Макет расчетов:
+        p = new Point(p); // РќРµ РёР·РјРµРЅСЏРµРј РѕСЂРёРіРёРЅР°Р»
+        // Р’С‹РїРѕР»РЅСЏРµРј СЂР°СЃС‡РµС‚С‹, РёСЃРїРѕР»СЊР·СѓСЏ v. РњР°РєРµС‚ СЂР°СЃС‡РµС‚РѕРІ:
         p.setX(p.getX() + 1);
         p.setY(p.getY() + 1);
         p.setZ(p.getZ() + 1);

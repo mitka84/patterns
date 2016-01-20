@@ -1,9 +1,9 @@
-package ru.savochkindv.patterns.singleton.first;
+package ru.savochkindv.patterns.singleton;
 
 /**
- * Класс, реализующий синглетон
- * Самая примитивная реализация.
- * Не работает в многопоточной среде
+ * РљР»Р°СЃСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ СЃРёРЅРіР»РµС‚РѕРЅ
+ * РЎР°РјР°СЏ РїСЂРёРјРёС‚РёРІРЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ.
+ * РќРµ СЂР°Р±РѕС‚Р°РµС‚ РІ РјРЅРѕРіРѕРїРѕС‚РѕС‡РЅРѕР№ СЃСЂРµРґРµ
  * Created by savochkindv on 19.01.2016.
  */
 public final class FirstSingleton {

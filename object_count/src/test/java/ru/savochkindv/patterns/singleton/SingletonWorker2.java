@@ -1,20 +1,20 @@
-package ru.savochkindv.patterns.singleton.second;
+package ru.savochkindv.patterns.singleton;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Класс, описывающий воркера для теста
+ * РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РІРѕСЂРєРµСЂР° РґР»СЏ С‚РµСЃС‚Р°
  * Created by savochkindv on 19.01.2016.
  */
-public class SingletonWorker implements Runnable {
+public class SingletonWorker2 implements Runnable {
 
     private CountDownLatch timer;
     private List<SecondSingleton> list;
     private AtomicInteger countFinished;
 
-    public SingletonWorker(CountDownLatch timer, AtomicInteger countFinished, List<SecondSingleton> list) {
+    public SingletonWorker2(CountDownLatch timer, AtomicInteger countFinished, List<SecondSingleton> list) {
         this.timer = timer;
         this.list = list;
         this.countFinished = countFinished;

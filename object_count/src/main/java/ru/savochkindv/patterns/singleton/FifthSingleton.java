@@ -1,8 +1,8 @@
-package ru.savochkindv.patterns.singleton.fifth;
+package ru.savochkindv.patterns.singleton;
 
 /**
- * Пятая реализация синглетона.
- * Все проблемы решены.
+ * РџСЏС‚Р°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃРёРЅРіР»РµС‚РѕРЅР°.
+ * Р’СЃРµ РїСЂРѕР±Р»РµРјС‹ СЂРµС€РµРЅС‹.
  * Created by savochkindv on 19.01.2016.
  */
 public final class FifthSingleton {
