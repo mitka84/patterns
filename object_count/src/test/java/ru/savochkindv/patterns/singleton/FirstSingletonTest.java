@@ -29,8 +29,8 @@ public class FirstSingletonTest {
         System.out.println("All finished");
         System.out.println(list.size());
         FirstSingleton first = list.get(0);
-        for(FirstSingleton singleton : list){
-            if(!first.equals(singleton)){
+        for (FirstSingleton singleton : list) {
+            if (!first.equals(singleton)) {
                 System.out.println("Awesome! Different singletons!");
                 break;
             }

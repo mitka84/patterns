@@ -12,10 +12,10 @@ public final class FifthSingleton {
     private FifthSingleton() {
     }
 
-    public static FifthSingleton getInstance(){
-        if(instance == null){
-            synchronized (FifthSingleton.class){
-                if(instance == null) {
+    public static FifthSingleton getInstance() {
+        if (instance == null) {
+            synchronized (FifthSingleton.class) {
+                if (instance == null) {
                     instance = new FifthSingleton();
                 }
             }

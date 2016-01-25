@@ -11,16 +11,16 @@ public final class ThirdSingleton {
     private ThirdSingleton() {
     }
 
-    private static class SingletonHolder{
-        private final static ThirdSingleton instance = new ThirdSingleton();
-    }
-
-    public static ThirdSingleton getInstance(){
+    public static ThirdSingleton getInstance() {
         return SingletonHolder.instance;
     }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
         throw new UnsupportedOperationException();
+    }
+
+    private static class SingletonHolder {
+        private final static ThirdSingleton instance = new ThirdSingleton();
     }
 }

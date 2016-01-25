@@ -1,4 +1,4 @@
 rootProject.name = 'patterns_root'
-include 'simplifying'
 include 'object_count'
+include 'creational'
 

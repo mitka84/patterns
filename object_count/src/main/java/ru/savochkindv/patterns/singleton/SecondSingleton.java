@@ -12,10 +12,10 @@ public final class SecondSingleton {
 
     private static SecondSingleton instance = new SecondSingleton();
 
-    private SecondSingleton(){
+    private SecondSingleton() {
     }
 
-    public static SecondSingleton getInstance(){
+    public static SecondSingleton getInstance() {
         return instance;
     }
 

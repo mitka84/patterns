@@ -31,8 +31,8 @@ public class FifthSingletonTest {
         System.out.println("All finished");
         System.out.println(list.size());
         FifthSingleton first = list.get(0);
-        for(FifthSingleton singleton : list){
-            if(!first.equals(singleton)){
+        for (FifthSingleton singleton : list) {
+            if (!first.equals(singleton)) {
                 System.out.println("Awesome! Different singletons!");
                 fail();
                 break;
