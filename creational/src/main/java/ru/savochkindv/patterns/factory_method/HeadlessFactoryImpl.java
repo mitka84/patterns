@@ -1,10 +1,10 @@
 package ru.savochkindv.patterns.factory_method;
 
 /**
- * Класс, описывающий фабрику юнитов - китайцев
+ * Класс, описывающий фабрику юнитов без головы
  * Created by savochkindv on 27.01.2016.
  */
-public class ChineseFactory extends AbstractUnitFactory {
+public class HeadlessFactoryImpl extends AbstractUnitFactory {
 
     @Override
     IUnit getUnit() {
@@ -12,17 +12,17 @@ public class ChineseFactory extends AbstractUnitFactory {
 
             @Override
             public String getName() {
-                return "Chinese";
+                return "Headless";
             }
 
             @Override
             public String getFace() {
-                return "-_-";
+                return "";
             }
 
             @Override
             public String getWeapon() {
-                return "=|---";
+                return "=|======";
             }
         };
     }

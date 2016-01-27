@@ -4,7 +4,7 @@ package ru.savochkindv.patterns.abstract_factory;
  * Класс, описывающий номер телефона для США
  * Created by savochkindv on 25.01.2016.
  */
-public class UsaPhoneNumber extends PhoneNumber {
+public class UsaPhoneNumberImpl extends AbstractPhoneNumber {
 
     /**
      * Код страны

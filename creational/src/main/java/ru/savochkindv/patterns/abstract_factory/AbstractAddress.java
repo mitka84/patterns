@@ -4,7 +4,7 @@ package ru.savochkindv.patterns.abstract_factory;
  * Класс, описывающий адрес
  * Created by savochkindv on 25.01.2016.
  */
-public abstract class Address {
+public abstract class AbstractAddress {
 
     /**
      * Конец строки

@@ -4,7 +4,7 @@ package ru.savochkindv.patterns.abstract_factory;
  * Класс, описывающий номер телефона
  * Created by savochkindv on 25.01.2016.
  */
-public abstract class PhoneNumber {
+public abstract class AbstractPhoneNumber {
 
     /**
      * Номер телефона

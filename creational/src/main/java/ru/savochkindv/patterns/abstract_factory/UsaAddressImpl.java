@@ -3,7 +3,7 @@ package ru.savochkindv.patterns.abstract_factory;
 /**
  * Created by savochkindv on 25.01.2016.
  */
-public class UsaAddress extends Address {
+public class UsaAddressImpl extends AbstractAddress {
 
     /**
      * Страна

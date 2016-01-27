@@ -6,8 +6,8 @@ package ru.savochkindv.patterns.factory_method;
 public class Main {
 
     public static void main(String[] args) {
-        new ChineseFactory().displayUnit();
-        new HeadlessFactory().displayUnit();
-        new GoggleEyedFactory().displayUnit();
+        new ChineseFactoryImpl().displayUnit();
+        new HeadlessFactoryImpl().displayUnit();
+        new GoggleEyedFactoryImpl().displayUnit();
     }
 }

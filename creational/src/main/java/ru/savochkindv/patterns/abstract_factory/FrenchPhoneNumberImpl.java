@@ -4,7 +4,7 @@ package ru.savochkindv.patterns.abstract_factory;
  * Класс, описывающий французский номер телефона
  * Created by savochkindv on 25.01.2016.
  */
-public class FrenchPhoneNumber extends PhoneNumber {
+public class FrenchPhoneNumberImpl extends AbstractPhoneNumber {
 
     /**
      * Код страны

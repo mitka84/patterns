@@ -4,7 +4,7 @@ package ru.savochkindv.patterns.abstract_factory;
  * Класс, описывающий французский адрес
  * Created by savochkindv on 25.01.2016.
  */
-public class FrenchAddress extends Address {
+public class FrenchAddressImpl extends AbstractAddress {
 
     /**
      * Строна
