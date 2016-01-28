@@ -8,7 +8,7 @@ package ru.savochkindv.patterns.singleton;
  * Отсутствует возможность обработки исключительных ситуаций во время вызова конструктора.
  * Created by savochkindv on 19.01.2016.
  */
-public final class SecondSingleton {
+public final class SecondSingleton implements ISingleton {
 
     private static SecondSingleton instance = new SecondSingleton();
 

@@ -6,7 +6,7 @@ package ru.savochkindv.patterns.singleton;
  * Не работает в многопоточной среде
  * Created by savochkindv on 19.01.2016.
  */
-public final class FirstSingleton {
+public final class FirstSingleton implements ISingleton {
 
     private static FirstSingleton instance;
 

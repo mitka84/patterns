@@ -7,7 +7,7 @@ package ru.savochkindv.patterns.singleton;
  * Все остальные вызовы тратят время
  * Created by savochkindv on 19.01.2016.
  */
-public final class FourthSingleton {
+public final class FourthSingleton implements ISingleton {
 
     private static FourthSingleton instance;
 

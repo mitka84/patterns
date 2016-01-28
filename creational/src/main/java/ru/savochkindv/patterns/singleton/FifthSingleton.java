@@ -5,7 +5,7 @@ package ru.savochkindv.patterns.singleton;
  * Все проблемы решены.
  * Created by savochkindv on 19.01.2016.
  */
-public final class FifthSingleton {
+public final class FifthSingleton implements ISingleton {
 
     private static volatile FifthSingleton instance;
 

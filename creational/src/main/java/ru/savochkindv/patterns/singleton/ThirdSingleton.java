@@ -6,7 +6,7 @@ package ru.savochkindv.patterns.singleton;
  * Минусы: осталась проблема с обработкой исключительных ситуаций в конструкторе
  * Created by savochkindv on 19.01.2016.
  */
-public final class ThirdSingleton {
+public final class ThirdSingleton implements ISingleton {
 
     private ThirdSingleton() {
     }

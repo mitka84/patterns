@@ -21,7 +21,13 @@ public class SecondSingletonTest {
         List<SecondSingleton> list = new CopyOnWriteArrayList<>();
         AtomicInteger countFinished = new AtomicInteger(0);
         for (int i = 0; i < THREADS; ++i) {
-            new SingletonWorker2(counter, countFinished, list);
+            new AbstractSingletonWorker<SecondSingleton>(counter, countFinished, list) {
+
+                @Override
+                protected SecondSingleton getInstance() {
+                    return SecondSingleton.getInstance();
+                }
+            };
         }
         counter.countDown();
         while (countFinished.get() != THREADS) { //Как подругому заджойнить основной поток и другие из CountDownLatch?

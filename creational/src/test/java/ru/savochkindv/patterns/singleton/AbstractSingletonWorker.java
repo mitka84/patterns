@@ -5,16 +5,15 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Класс, описывающий воркера для теста
- * Created by savochkindv on 19.01.2016.
+ * Created by savochkindv on 28.01.2016.
  */
-public class SingletonWorker1 implements Runnable {
+public abstract class AbstractSingletonWorker<T extends ISingleton> implements Runnable {
 
     private CountDownLatch timer;
-    private List<FirstSingleton> list;
+    private List<T> list;
     private AtomicInteger countFinished;
 
-    public SingletonWorker1(CountDownLatch timer, AtomicInteger countFinished, List<FirstSingleton> list) {
+    public AbstractSingletonWorker(CountDownLatch timer, AtomicInteger countFinished, List<T> list) {
         this.timer = timer;
         this.list = list;
         this.countFinished = countFinished;
@@ -28,8 +27,11 @@ public class SingletonWorker1 implements Runnable {
         } catch (InterruptedException ie) {
             ie.printStackTrace();
         }
-        list.add(FirstSingleton.getInstance());
+        list.add(getInstance());
         countFinished.incrementAndGet();
         System.out.println("Finish work");
     }
+
+    protected abstract T getInstance();
+
 }

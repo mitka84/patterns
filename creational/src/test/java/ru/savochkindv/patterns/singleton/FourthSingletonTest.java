@@ -7,20 +7,28 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static org.junit.Assert.fail;
+
 /**
  * Created by savochkindv on 19.01.2016.
  */
-public class FirstSingletonTest {
+public class FourthSingletonTest {
 
     private static final int THREADS = 50;
 
     @Test
     public void testGetInstance() throws Exception {
         CountDownLatch counter = new CountDownLatch(1);
-        List<FirstSingleton> list = new CopyOnWriteArrayList<>();
+        List<FourthSingleton> list = new CopyOnWriteArrayList<>();
         AtomicInteger countFinished = new AtomicInteger(0);
         for (int i = 0; i < THREADS; ++i) {
-            new SingletonWorker1(counter, countFinished, list);
+            new AbstractSingletonWorker<FourthSingleton>(counter, countFinished, list) {
+
+                @Override
+                protected FourthSingleton getInstance() {
+                    return FourthSingleton.getInstance();
+                }
+            };
         }
         counter.countDown();
         while (countFinished.get() != THREADS) { //Как подругому заджойнить основной поток и другие из CountDownLatch?
@@ -28,10 +36,11 @@ public class FirstSingletonTest {
         }
         System.out.println("All finished");
         System.out.println(list.size());
-        FirstSingleton first = list.get(0);
-        for (FirstSingleton singleton : list) {
+        FourthSingleton first = list.get(0);
+        for (FourthSingleton singleton : list) {
             if (!first.equals(singleton)) {
                 System.out.println("Awesome! Different singletons!");
+                fail();
                 break;
             }
         }
