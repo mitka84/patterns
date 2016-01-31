@@ -1,5 +1,7 @@
 package ru.savochkindv.patterns.builder;
 
+import ru.savochkindv.patterns.common.IContact;
+
 import java.util.Date;
 import java.util.List;
 
@@ -56,7 +58,7 @@ public class AppointmentBuilder {
      *
      * @param attendees список участников
      */
-    public void appendAttendees(List<Contact> attendees) {
+    public void appendAttendees(List<? super IContact> attendees) {
         if (attendees != null && !attendees.isEmpty()) {
             appointment.setAttendees(attendees);
         }

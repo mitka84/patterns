@@ -2,6 +2,7 @@ package ru.savochkindv.patterns.builder;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import ru.savochkindv.patterns.common.IContact;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,7 +17,7 @@ public class Appointment {
     /**
      * Список участников
      */
-    private List<Contact> attendees = new ArrayList<>();
+    private List<? super IContact> attendees = new ArrayList<>();
 
     /**
      * Время начала
@@ -38,13 +39,13 @@ public class Appointment {
      */
     private Location location;
 
-    public void addAttendee(Contact attendee) {
+    public void addAttendee(IContact attendee) {
         if (!attendees.contains(attendee)) {
             attendees.add(attendee);
         }
     }
 
-    public void removeAttendee(Contact attendee) {
+    public void removeAttendee(IContact attendee) {
         attendees.remove(attendee);
     }
 
@@ -64,11 +65,11 @@ public class Appointment {
         this.location = location;
     }
 
-    public List<Contact> getAttendees() {
+    public List<? super IContact> getAttendees() {
         return attendees;
     }
 
-    public void setAttendees(List<Contact> attendees) {
+    public void setAttendees(List<? super IContact> attendees) {
         if (attendees != null) {
             this.attendees = attendees;
         }

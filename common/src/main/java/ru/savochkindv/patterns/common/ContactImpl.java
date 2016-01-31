@@ -1,13 +1,13 @@
-package ru.savochkindv.patterns.builder;
+package ru.savochkindv.patterns.common;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Класс, описывающий контакт
- * Created by savochkindv on 26.01.2016.
+ * Класс, описывающий базовую реализацию контакта
+ * Created by savochkindv on 31.01.2016.
  */
-public class Contact {
+public class ContactImpl implements IContact {
 
     /**
      * Имя
@@ -31,13 +31,12 @@ public class Contact {
 
     /**
      * Конструктор
-     *
      * @param firstName    имя
      * @param lastName     фамилия
      * @param title        заголовок
      * @param organization организация
      */
-    public Contact(String firstName, String lastName, String title, String organization) {
+    public ContactImpl(String firstName, String lastName, String title, String organization) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.title = title;

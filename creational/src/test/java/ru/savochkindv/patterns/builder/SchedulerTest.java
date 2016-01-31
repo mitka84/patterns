@@ -2,6 +2,8 @@ package ru.savochkindv.patterns.builder;
 
 import org.junit.Before;
 import org.junit.Test;
+import ru.savochkindv.patterns.common.ContactImpl;
+import ru.savochkindv.patterns.common.IContact;
 
 import java.util.Arrays;
 import java.util.Calendar;
@@ -27,7 +29,7 @@ public class SchedulerTest {
         calendar.add(Calendar.DATE, 5);
         Appointment appointment = null;
         try {
-            appointment = scheduler.createAppointment(new AppointmentBuilder(), calendar.getTime(), null, "Встреча", new Location("Москва"), Arrays.asList(new Contact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
+            appointment = scheduler.createAppointment(new AppointmentBuilder(), calendar.getTime(), null, "Встреча", new Location("Москва"), Arrays.asList(newContact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
         } catch (InformationRequiredException ire) {
             fail();
         }
@@ -61,7 +63,7 @@ public class SchedulerTest {
         Date endDate = calendar.getTime();
         Appointment appointment = null;
         try {
-            appointment = scheduler.createAppointment(new MeetingBuilder(), startDate, endDate, "Встреча", new Location("Москва"), Arrays.asList(new Contact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
+            appointment = scheduler.createAppointment(new MeetingBuilder(), startDate, endDate, "Встреча", new Location("Москва"), Arrays.asList(newContact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
         } catch (InformationRequiredException ire) {
             fail();
         }
@@ -81,11 +83,15 @@ public class SchedulerTest {
         calendar.add(Calendar.DATE, 5);
         Appointment appointment = null;
         try {
-            appointment = scheduler.createAppointment(new MeetingBuilder(), calendar.getTime(), null, "Встреча", new Location("Москва"), Arrays.asList(new Contact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
+            appointment = scheduler.createAppointment(new MeetingBuilder(), calendar.getTime(), null, "Встреча", new Location("Москва"), Arrays.asList(newContact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
             fail();
         } catch (InformationRequiredException ire) {
             assertEquals(2, ire.getInformationRequired());
         }
+    }
+
+    private IContact newContact(String firstName, String lastName, String title, String organization) {
+        return new ContactImpl(firstName, lastName, title, organization);
     }
 
 }

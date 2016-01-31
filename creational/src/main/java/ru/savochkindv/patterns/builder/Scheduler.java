@@ -1,5 +1,7 @@
 package ru.savochkindv.patterns.builder;
 
+import ru.savochkindv.patterns.common.IContact;
+
 import java.util.Date;
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class Scheduler {
      * @throws InformationRequiredException
      */
     public Appointment createAppointment(AppointmentBuilder builder, Date startDate, Date endDate, String description,
-                                         Location location, List<Contact> attendees) throws InformationRequiredException {
+                                         Location location, List<? super IContact> attendees) throws InformationRequiredException {
         if (builder == null) {
             builder = new AppointmentBuilder();
         }
