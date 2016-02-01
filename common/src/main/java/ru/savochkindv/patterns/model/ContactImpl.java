@@ -1,4 +1,4 @@
-package ru.savochkindv.patterns.common;
+package ru.savochkindv.patterns.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

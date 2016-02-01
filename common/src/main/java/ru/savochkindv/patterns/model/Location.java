@@ -1,4 +1,4 @@
-package ru.savochkindv.patterns.builder;
+package ru.savochkindv.patterns.model;
 
 /**
  * Класс, описывающий местоположение

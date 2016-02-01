@@ -1,8 +1,8 @@
 package ru.savochkindv.patterns.chain_of_responsibility;
 
 import org.junit.Test;
-import ru.savochkindv.patterns.common.ContactImpl;
-import ru.savochkindv.patterns.common.IContact;
+import ru.savochkindv.patterns.model.ContactImpl;
+import ru.savochkindv.patterns.model.IContact;
 
 import java.util.List;
 

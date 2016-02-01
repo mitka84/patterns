@@ -1,4 +1,4 @@
-package ru.savochkindv.patterns.common;
+package ru.savochkindv.patterns.model;
 
 /**
  * Интерфейс описывающий контаакт

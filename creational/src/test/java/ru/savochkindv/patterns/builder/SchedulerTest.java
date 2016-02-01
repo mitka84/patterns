@@ -2,8 +2,10 @@ package ru.savochkindv.patterns.builder;
 
 import org.junit.Before;
 import org.junit.Test;
-import ru.savochkindv.patterns.common.ContactImpl;
-import ru.savochkindv.patterns.common.IContact;
+import ru.savochkindv.patterns.model.Appointment;
+import ru.savochkindv.patterns.model.ContactImpl;
+import ru.savochkindv.patterns.model.IContact;
+import ru.savochkindv.patterns.model.Location;
 
 import java.util.Arrays;
 import java.util.Calendar;

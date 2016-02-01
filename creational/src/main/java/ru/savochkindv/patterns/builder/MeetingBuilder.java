@@ -1,5 +1,7 @@
 package ru.savochkindv.patterns.builder;
 
+import ru.savochkindv.patterns.model.Appointment;
+
 /**
  * Класс, описывающий деловую встречу (необходима дата завершения)
  * Created by savochkindv on 26.01.2016.

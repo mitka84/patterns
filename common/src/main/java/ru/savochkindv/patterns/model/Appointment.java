@@ -1,8 +1,7 @@
-package ru.savochkindv.patterns.builder;
+package ru.savochkindv.patterns.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import ru.savochkindv.patterns.common.IContact;
 
 import java.util.ArrayList;
 import java.util.Date;
