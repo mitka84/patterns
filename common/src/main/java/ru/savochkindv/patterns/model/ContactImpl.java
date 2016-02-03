@@ -43,6 +43,12 @@ public class ContactImpl implements IContact {
         this.organization = organization;
     }
 
+    /**
+     * Конструктор
+     */
+    public ContactImpl() {
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -77,6 +83,6 @@ public class ContactImpl implements IContact {
 
     @Override
     public String toString() {
-        return ToStringBuilder.reflectionToString(this, ToStringStyle.SIMPLE_STYLE);
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
 }
