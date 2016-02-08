@@ -60,7 +60,7 @@ public class AppointmentBuilder {
      *
      * @param attendees список участников
      */
-    public void appendAttendees(List<? super IContact> attendees) {
+    public void appendAttendees(List<IContact> attendees) {
         if (attendees != null && !attendees.isEmpty()) {
             appointment.setAttendees(attendees);
         }

@@ -16,7 +16,7 @@ public class Appointment {
     /**
      * Список участников
      */
-    private List<? super IContact> attendees = new ArrayList<>();
+    private List<IContact> attendees = new ArrayList<>();
 
     /**
      * Время начала
@@ -64,11 +64,11 @@ public class Appointment {
         this.location = location;
     }
 
-    public List<? super IContact> getAttendees() {
+    public List<IContact> getAttendees() {
         return attendees;
     }
 
-    public void setAttendees(List<? super IContact> attendees) {
+    public void setAttendees(List<IContact> attendees) {
         if (attendees != null) {
             this.attendees = attendees;
         }

@@ -26,7 +26,7 @@ public class Scheduler {
      * @throws InformationRequiredException
      */
     public Appointment createAppointment(AppointmentBuilder builder, Date startDate, Date endDate, String description,
-                                         Location location, List<? super IContact> attendees) throws InformationRequiredException {
+                                         Location location, List<IContact> attendees) throws InformationRequiredException {
         if (builder == null) {
             builder = new AppointmentBuilder();
         }
