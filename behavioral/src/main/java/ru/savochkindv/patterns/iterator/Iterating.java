@@ -6,8 +6,8 @@ import java.util.Iterator;
  * Интерфейс, описывающий наличие итератора
  * Created by savochkindv on 04.02.2016.
  */
-public interface Iterating {
+public interface Iterating<T> {
 
-    Iterator getIterator();
+    Iterator<T> getIterator();
 
 }

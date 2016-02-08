@@ -4,7 +4,7 @@ package ru.savochkindv.patterns.iterator;
  * Интерфейс, описывающий список задач
  * Created by savochkindv on 04.02.2016.
  */
-public interface ToDoList extends Iterating {
+public interface ToDoList extends Iterating<String> {
 
     /**
      * Добавить элемент в список

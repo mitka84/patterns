@@ -55,7 +55,7 @@ public class ToDoListImpl implements ToDoList {
     }
 
     @Override
-    public Iterator getIterator() {
+    public Iterator<String> getIterator() {
         return items.iterator();
     }
 

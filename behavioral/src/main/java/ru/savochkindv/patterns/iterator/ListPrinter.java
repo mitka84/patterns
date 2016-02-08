@@ -16,7 +16,7 @@ public class ListPrinter {
      * @param out  поток
      */
     public static void printToDoList(ToDoList list, PrintStream out) {
-        Iterator elements = list.getIterator();
+        Iterator<String> elements = list.getIterator();
         out.println(" List - " + list + ":");
         while (elements.hasNext()) {
             out.println("\t" + elements.next());
@@ -30,10 +30,10 @@ public class ListPrinter {
      * @param output      поток
      */
     public static void printToDoListCollection(ToDoListCollection lotsOfLists, PrintStream output) {
-        Iterator elements = lotsOfLists.getIterator();
+        Iterator<ToDoList> elements = lotsOfLists.getIterator();
         output.println("\"To Do\" ListCollection:");
         while (elements.hasNext()) {
-            printToDoList((ToDoList) elements.next(), output);
+            printToDoList(elements.next(), output);
         }
     }
 

@@ -30,7 +30,7 @@ public class ToDoListCollectionImpl implements ToDoListCollection {
     }
 
     @Override
-    public Iterator getIterator() {
+    public Iterator<ToDoList> getIterator() {
         return lists.values().iterator();
     }
 }
