@@ -1,8 +1,8 @@
 package ru.savochkindv.patterns.builder;
 
 import ru.savochkindv.patterns.model.Appointment;
-import ru.savochkindv.patterns.model.IContact;
 import ru.savochkindv.patterns.model.Location;
+import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import java.util.Date;
 import java.util.List;
@@ -41,7 +41,7 @@ public class AppointmentBuilder {
         if (startDate != null && startDate.after(currentDate)) {
             appointment.setStartDate(startDate);
         }
-        if (endDate != null && endDate.after(startDate)) {
+        if (endDate != null && startDate != null && endDate.after(startDate)) {
             appointment.setEndDate(endDate);
         }
     }
@@ -68,8 +68,7 @@ public class AppointmentBuilder {
 
     /**
      * Добавляет местоположение встречи
-     *
-     * @param location
+     * @param location местоположение
      */
     public void appendLocation(Location location) {
         if (location != null) {

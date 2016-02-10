@@ -2,6 +2,7 @@ package ru.savochkindv.patterns.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import java.util.ArrayList;
 import java.util.Date;

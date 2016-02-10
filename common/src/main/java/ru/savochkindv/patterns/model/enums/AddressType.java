@@ -1,4 +1,4 @@
-package ru.savochkindv.patterns.prototype;
+package ru.savochkindv.patterns.model.enums;
 
 /**
  * Перечисление, описывающее тип адреса

@@ -1,6 +1,6 @@
 package ru.savochkindv.patterns.chain_of_responsibility;
 
-import ru.savochkindv.patterns.model.IContact;
+import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public interface IProjectItem {
     /**
      * Конец строки
      */
-    static final String EOL_STRING = System.getProperty("line.separator");
+    String EOL_STRING = System.getProperty("line.separator");
 
     /**
      * Возвращает родительский элемент проекта

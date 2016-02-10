@@ -1,6 +1,6 @@
 package ru.savochkindv.patterns.interpreter;
 
-import ru.savochkindv.patterns.model.IContact;
+import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ public class ContactList {
     }
 
     public IContact[] getContactsAsArray() {
-        return contacts.toArray(new IContact[0]);
+        return contacts.toArray(new IContact[contacts.size()]);
     }
 
     /**

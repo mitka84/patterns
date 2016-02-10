@@ -1,4 +1,4 @@
-package ru.savochkindv.patterns.model;
+package ru.savochkindv.patterns.model.interfaces;
 
 /**
  * Интерфейс описывающий контаакт
@@ -21,5 +21,9 @@ public interface IContact {
     String getOrganization();
 
     void setOrganization(String organization);
+
+    IAddress getAddress();
+
+    void setAddress(IAddress address);
 
 }

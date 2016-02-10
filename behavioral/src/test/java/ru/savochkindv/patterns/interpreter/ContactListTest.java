@@ -2,11 +2,12 @@ package ru.savochkindv.patterns.interpreter;
 
 import org.junit.Test;
 import ru.savochkindv.patterns.model.ContactImpl;
-import ru.savochkindv.patterns.model.IContact;
+import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static ru.savochkindv.patterns.model.helper.TestHelper.makeContactNullableAddress;
 
 /**
  * Created by savochkindv on 03.02.2016.
@@ -14,7 +15,6 @@ import static org.junit.Assert.assertEquals;
 public class ContactListTest {
 
     private ContactList candidates = makeContactList();
-    ;
     private Context ctx = new Context();
     private IContact testContact = new ContactImpl();
 
@@ -55,14 +55,10 @@ public class ContactListTest {
 
     private ContactList makeContactList() {
         ContactList contactList = new ContactList();
-        contactList.addContact(makeContact("Дмитрий", "Савочкин", "Папа", "БИФИТ"));
-        contactList.addContact(makeContact("Светлана", "Савочкина", "Мама", "нет"));
-        contactList.addContact(makeContact("Артем", "Долгов", "Старшенький", "садик"));
-        contactList.addContact(makeContact("Максим", "Савочкин", "Младшенький", "садик"));
+        contactList.addContact(makeContactNullableAddress("Дмитрий", "Савочкин", "Папа", "БИФИТ"));
+        contactList.addContact(makeContactNullableAddress("Светлана", "Савочкина", "Мама", "нет"));
+        contactList.addContact(makeContactNullableAddress("Артем", "Долгов", "Старшенький", "садик"));
+        contactList.addContact(makeContactNullableAddress("Максим", "Савочкин", "Младшенький", "садик"));
         return contactList;
-    }
-
-    private IContact makeContact(String firstName, String lastName, String title, String organization) {
-        return new ContactImpl(firstName, lastName, title, organization);
     }
 }

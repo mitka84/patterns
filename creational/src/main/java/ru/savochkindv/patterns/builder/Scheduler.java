@@ -1,8 +1,8 @@
 package ru.savochkindv.patterns.builder;
 
 import ru.savochkindv.patterns.model.Appointment;
-import ru.savochkindv.patterns.model.IContact;
 import ru.savochkindv.patterns.model.Location;
+import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import java.util.Date;
 import java.util.List;

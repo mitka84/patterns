@@ -1,6 +1,6 @@
 package ru.savochkindv.patterns.chain_of_responsibility;
 
-import ru.savochkindv.patterns.model.IContact;
+import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import java.util.ArrayList;
 import java.util.List;

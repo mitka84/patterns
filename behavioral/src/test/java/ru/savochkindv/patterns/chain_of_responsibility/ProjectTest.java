@@ -1,13 +1,13 @@
 package ru.savochkindv.patterns.chain_of_responsibility;
 
 import org.junit.Test;
-import ru.savochkindv.patterns.model.ContactImpl;
-import ru.savochkindv.patterns.model.IContact;
+import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static ru.savochkindv.patterns.model.helper.TestHelper.makeContactNullableAddress;
 
 /**
  * Created by savochkindv on 31.01.2016.
@@ -32,10 +32,10 @@ public class ProjectTest {
     }
 
     private Project prepareProject() {
-        IContact projectOwner = newContact("Дмитрий", "Савочкин", "Савок", "нет");
-        IContact task1Owner = newContact("Светлана", "Савочкина", "Овечка", "нет");
-        IContact task2Owner = newContact("Максим", "Савочкин", "Савочек", "нет");
-        IContact task3Owner = newContact("Артем", "Долгов", "", "нет");
+        IContact projectOwner = makeContactNullableAddress("Дмитрий", "Савочкин", "Савок", "нет");
+        IContact task1Owner = makeContactNullableAddress("Светлана", "Савочкина", "Овечка", "нет");
+        IContact task2Owner = makeContactNullableAddress("Максим", "Савочкин", "Савочек", "нет");
+        IContact task3Owner = makeContactNullableAddress("Артем", "Долгов", "", "нет");
         project = new Project("testProject", projectOwner, "Тестовый проект");
         Task baseTask = new Task(project, "Общая задача", "Описание", null, true);
         project.addProjectItem(baseTask);
@@ -47,9 +47,5 @@ public class ProjectTest {
         motherTask.addProjectItem(artemTask);
         motherTask.addProjectItem(new Task(motherTask));
         return project;
-    }
-
-    private IContact newContact(String firstName, String lastName, String title, String organization) {
-        return new ContactImpl(firstName, lastName, title, organization);
     }
 }

@@ -3,15 +3,14 @@ package ru.savochkindv.patterns.builder;
 import org.junit.Before;
 import org.junit.Test;
 import ru.savochkindv.patterns.model.Appointment;
-import ru.savochkindv.patterns.model.ContactImpl;
-import ru.savochkindv.patterns.model.IContact;
 import ru.savochkindv.patterns.model.Location;
 
-import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 
 import static org.junit.Assert.*;
+import static ru.savochkindv.patterns.model.helper.TestHelper.makeContactNullableAddress;
 
 /**
  * Created by savochkindv on 26.01.2016.
@@ -31,7 +30,7 @@ public class SchedulerTest {
         calendar.add(Calendar.DATE, 5);
         Appointment appointment = null;
         try {
-            appointment = scheduler.createAppointment(new AppointmentBuilder(), calendar.getTime(), null, "Встреча", new Location("Москва"), Arrays.asList(newContact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
+            appointment = scheduler.createAppointment(new AppointmentBuilder(), calendar.getTime(), null, "Встреча", new Location("Москва"), Collections.singletonList(makeContactNullableAddress("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
         } catch (InformationRequiredException ire) {
             fail();
         }
@@ -65,7 +64,7 @@ public class SchedulerTest {
         Date endDate = calendar.getTime();
         Appointment appointment = null;
         try {
-            appointment = scheduler.createAppointment(new MeetingBuilder(), startDate, endDate, "Встреча", new Location("Москва"), Arrays.asList(newContact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
+            appointment = scheduler.createAppointment(new MeetingBuilder(), startDate, endDate, "Встреча", new Location("Москва"), Collections.singletonList(makeContactNullableAddress("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
         } catch (InformationRequiredException ire) {
             fail();
         }
@@ -83,17 +82,11 @@ public class SchedulerTest {
     public void testCreateMeeting_fail() throws Exception {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DATE, 5);
-        Appointment appointment = null;
         try {
-            appointment = scheduler.createAppointment(new MeetingBuilder(), calendar.getTime(), null, "Встреча", new Location("Москва"), Arrays.asList(newContact("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
+            scheduler.createAppointment(new MeetingBuilder(), calendar.getTime(), null, "Встреча", new Location("Москва"), Collections.singletonList(makeContactNullableAddress("Дмитрий", "Савочкин", "Савок", "БИФИТ")));
             fail();
         } catch (InformationRequiredException ire) {
             assertEquals(2, ire.getInformationRequired());
         }
     }
-
-    private IContact newContact(String firstName, String lastName, String title, String organization) {
-        return new ContactImpl(firstName, lastName, title, organization);
-    }
-
 }
