@@ -6,7 +6,9 @@ import static org.junit.Assert.assertEquals;
 import static ru.savochkindv.patterns.model.helper.TestHelper.makeContactNullableAddress;
 
 /**
- * Created by savochkindv on 10.02.2016.
+ * Класс-помошник для тесто. Знаю, что так не хорошо.
+ * @author savochkindv
+ *         Date: 10.02.2016.
  */
 public class AddressBookTest {
 

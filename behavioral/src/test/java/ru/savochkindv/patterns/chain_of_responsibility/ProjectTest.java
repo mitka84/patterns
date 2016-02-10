@@ -10,7 +10,9 @@ import static org.junit.Assert.assertNull;
 import static ru.savochkindv.patterns.model.helper.TestHelper.makeContactNullableAddress;
 
 /**
- * Created by savochkindv on 31.01.2016.
+ *
+ * @author savochkindv
+ *         Date: 31.01.2016.
  */
 public class ProjectTest {
 
