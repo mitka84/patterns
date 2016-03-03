@@ -2,4 +2,5 @@ rootProject.name = 'patterns_root'
 include 'creational'
 include 'behavioral'
 include 'common'
+include 'structural'
 
