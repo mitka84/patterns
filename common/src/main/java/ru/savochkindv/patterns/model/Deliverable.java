@@ -1,6 +1,7 @@
-package ru.savochkindv.patterns.composite;
+package ru.savochkindv.patterns.model;
 
 import ru.savochkindv.patterns.model.interfaces.IContact;
+import ru.savochkindv.patterns.model.interfaces.ProjectItem;
 
 /**
  * Класс, представляющий конечный продукт, получаемый в результате завершения текущего этапа.

@@ -1,5 +1,7 @@
 package ru.savochkindv.patterns.composite;
 
+import ru.savochkindv.patterns.model.interfaces.ProjectItem;
+
 import java.util.ArrayList;
 import java.util.List;
 

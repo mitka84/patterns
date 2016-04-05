@@ -1,6 +1,7 @@
-package ru.savochkindv.patterns.composite;
+package ru.savochkindv.patterns.model;
 
 import ru.savochkindv.patterns.model.interfaces.IContact;
+import ru.savochkindv.patterns.model.interfaces.ProjectItem;
 
 import java.util.ArrayList;
 import java.util.List;

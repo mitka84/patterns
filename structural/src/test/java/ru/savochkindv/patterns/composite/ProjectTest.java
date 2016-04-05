@@ -2,6 +2,8 @@ package ru.savochkindv.patterns.composite;
 
 import org.junit.Test;
 import ru.savochkindv.patterns.model.ContactImpl;
+import ru.savochkindv.patterns.model.Deliverable;
+import ru.savochkindv.patterns.model.Task;
 import ru.savochkindv.patterns.model.interfaces.IContact;
 
 import static junit.framework.TestCase.assertEquals;
