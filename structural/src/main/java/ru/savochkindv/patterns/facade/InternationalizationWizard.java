@@ -23,8 +23,8 @@ public class InternationalizationWizard {
     public InternationalizationWizard() {
         map = new HashMap<>();
         Nation[] nations = {
-                new Nation(NationType.USA, 'S', " +1", "us.properties", NumberFormat.getInstance(Locale.US)),
-                new Nation(NationType.GER, 'f', "+ 31", "dutch.properties", NumberFormat.getInstance(Locale.GERMANY)),
+                new Nation(NationType.USA, '$', "+1", "us.properties", NumberFormat.getInstance(Locale.US)),
+                new Nation(NationType.GER, 'f', "+31", "dutch.properties", NumberFormat.getInstance(Locale.GERMANY)),
                 new Nation(NationType.FRA, 'f', "+33", "french.properties", NumberFormat.getInstance(Locale.FRANCE))
         };
         for (Nation nation : nations) {
