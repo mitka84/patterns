@@ -2,11 +2,13 @@ package ru.savochkindv.patterns.model.interfaces;
 
 import ru.savochkindv.patterns.model.enums.AddressType;
 
+import java.io.Serializable;
+
 /**
  * Интерфейс, описывающий адресс
  * Created by savochkindv on 10.02.2016.
  */
-public interface IAddress {
+public interface IAddress extends Serializable {
 
     AddressType getType();
 
